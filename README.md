@@ -1,0 +1,1 @@
+Example service using s2s-auth-service for service-to-service authentication. Details about service are available [here](https://github.com/MateuszSapala/s2s-auth-service).
