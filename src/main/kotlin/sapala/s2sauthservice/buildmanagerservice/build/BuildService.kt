@@ -67,7 +67,6 @@ class BuildService(private val env: Env, private val remoteBuildService: RemoteB
                     jobs.add(BuildJob(dependency, dir, job))
                 }
             }
-            jobs.map { it.buildJob }.joinAll()
         }
     }
 
@@ -95,7 +94,6 @@ class BuildService(private val env: Env, private val remoteBuildService: RemoteB
         ZipUtil.zipDirectory(dir, zipFile, additionalFiles)
         remoteBuildService.remoteBuild(dependency, zipFile)
     }
-            ;
 
     private fun savePom(pomFile: File, node: JsonNode) {
         val text = mapper.writer(DefaultXmlPrettyPrinter()).writeValueAsString(node)
