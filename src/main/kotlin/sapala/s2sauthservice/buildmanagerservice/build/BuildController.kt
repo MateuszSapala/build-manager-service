@@ -17,7 +17,7 @@ class BuildController(private val buildService: BuildService) {
         produces = [MediaType.APPLICATION_OCTET_STREAM_VALUE]
     )
     fun build(@RequestParam("zippedFile") zippedFile: MultipartFile): ByteArrayResource {
-        val jar = buildService.build(zippedFile)
-        return ByteArrayResource(Files.readAllBytes(jar.toPath()))
+        val zip = buildService.build(zippedFile)
+        return ByteArrayResource(Files.readAllBytes(zip.toPath()))
     }
 }

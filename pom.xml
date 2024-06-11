@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>sapala.s2s-auth-service</groupId>
 	<artifactId>build-manager-service</artifactId>
-	<version>0.0.4</version>
+	<version>1.0.0</version>
 	<name>build-manager-service</name>
 	<description>Application for distributed building of multi-module applications using Maven</description>
 	<properties>
@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>sapala.s2s-auth-service</groupId>
 			<artifactId>s2s-auth-service-api</artifactId>
-			<version>0.0.4</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<!-- Web -->
